@@ -17,10 +17,10 @@ local FrameStk  = require("FrameStk")
 local MT    = require("MT")
 local cluster = os.getenv("VSC_INSTITUTE_CLUSTER") or ""
 local email
-if cluster ~= "sofia" then
-    email = "hpc@vub.be"
-else
+if cluster == "sofia" then
     email = "support@vscentrum.be"
+else
+    email = "hpc@vub.be"
 end
 
 
